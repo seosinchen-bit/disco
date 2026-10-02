@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DISCO NEVER STOPS — Interactive World</title>
+  <meta name="description" content="DISCO NEVER STOPS — an interactive disco world about music, people, color and movement.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23FFD60A'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial' font-weight='900' text-anchor='middle' fill='%230B0B10'%3ED%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- COVER -->
+  <section class="cover" id="cover">
+    <div class="cover-bg"></div>
+    <div class="cover-glow glow-a"></div>
+    <div class="cover-glow glow-b"></div>
+    <div class="cover-top">
+      <span>PROJECT 01</span>
+      <span>INTERACTIVE LANDSCAPE / 2026</span>
+    </div>
+
+    <div class="cover-title">
+      <p class="eyebrow">A DISCO WORLD MAKER</p>
+      <h1>DISCO<br><span>NEVER</span><br><i>STOPS.</i></h1>
+      <p class="cover-copy">音乐、灯光、身体与空间，在同一个永不停歇的夜晚里相遇。</p>
+    </div>
+
+    <div class="cover-bottom">
+      <button class="enter-btn" id="enterBtn">
+        <span class="enter-dot"></span>
+        ENTER THE DANCEFLOOR
+      </button>
+      <div class="cover-meta">
+        <span>TURN UP THE VOLUME</span>
+        <span>↘ SCROLL TO EXPLORE</span>
+      </div>
+    </div>
+
+    <div class="cover-corner">D</div>
+  </section>
+
+  <!-- MAIN -->
+  <main id="main">
+    <nav class="site-nav">
+      <a class="logo" href="#top">DISCO<br>NEVER STOPS</a>
+      <div class="nav-links">
+        <a href="#about">01 ABOUT</a>
+        <a href="#sound">02 SOUND</a>
+        <a href="#experience">03 EXPERIENCE</a>
+      </div>
+      <button class="sound-toggle" id="soundToggle" aria-label="Toggle music">
+        <span class="sound-bars"><i></i><i></i><i></i><i></i></span>
+        <span id="soundLabel">PLAY</span>
+      </button>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-noise"></div>
+      <div class="hero-number">00 / NIGHT MODE</div>
+      <p class="eyebrow">MUSIC · PEOPLE · COLOR · MOVEMENT</p>
+      <h2>THE NIGHT<br>IS <span>ALIVE.</span></h2>
+      <p class="hero-copy">
+        我们不生产音乐，我们制造夜晚。DISCO NEVER STOPS 是一个关于舞池、
+        灯光和永不停歇节奏的小世界。
+      </p>
+      <div class="scroll-line"><span></span> KEEP MOVING</div>
+    </header>
+
+    <section class="block" id="about">
+      <div class="section-head">
+        <span class="num">01</span>
+        <div>
+          <p class="eyebrow">THE IDEA</p>
+          <h3>ABOUT THE<br><em>DISCO</em></h3>
+        </div>
+      </div>
+
+      <div class="manifesto">
+        <p>“最好的空间，不是让人停下来看的空间，而是让人想要移动起来的空间。”</p>
+        <span>— DISCO NEVER STOPS</span>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card red">
+          <span class="tag">01 / MUSIC</span>
+          <h4>没有被切歌的夜晚</h4>
+          <p>从鼓机到合成器，我们只留下让脚底发痒的律动。音乐不是背景，它就是空间本身。</p>
+        </article>
+        <article class="about-card blue">
+          <span class="tag">02 / PEOPLE</span>
+          <h4>陌生人变成舞伴</h4>
+          <p>灯光一打、音乐一响，陌生人之间的距离开始缩短。舞池是一种没有语言的社交。</p>
+        </article>
+        <article class="about-card yellow">
+          <span class="tag">03 / COLOR</span>
+          <h4>红 · 蓝 · 黄</h4>
+          <p>热烈的红、电气的蓝、太阳的黄——颜色不是装饰，而是节奏的视觉化。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block sound-section" id="sound">
+      <div class="section-head">
+        <span class="num">02</span>
+        <div>
+          <p class="eyebrow">THE RHYTHM</p>
+          <h3>SOUND<br><em>SYSTEM</em></h3>
+        </div>
+      </div>
+
+      <div class="player-card">
+        <div class="record">
+          <div class="record-label">DNS<br><small>2026</small></div>
+        </div>
+        <div class="player-info">
+          <p class="eyebrow">LIVE GENERATIVE MIX</p>
+          <h4>DISCO NEVER STOPS / 120 BPM</h4>
+          <p>点击播放，网页会实时生成一段无版权的 disco groove。</p>
+          <div class="progress"><span id="progressBar"></span></div>
+          <div class="player-controls">
+            <button id="mainPlay" class="big-play">▶</button>
+            <div>
+              <span id="trackTime">00:00</span>
+              <span class="muted"> / LIVE LOOP</span>
+            </div>
+            <div class="eq" id="eq">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="track-list">
+        <button class="track active" data-bpm="120">
+          <span>01</span><strong>Disco Never Stops</strong><em>GENERATIVE / 120 BPM</em><b>▶</b>
+        </button>
+        <button class="track" data-bpm="126">
+          <span>02</span><strong>Neon Floor</strong><em>GENERATIVE / 126 BPM</em><b>▶</b>
+        </button>
+        <button class="track" data-bpm="112">
+          <span>03</span><strong>After Midnight</strong><em>GENERATIVE / 112 BPM</em><b>▶</b>
+        </button>
+      </div>
+    </section>
+
+    <section class="block experience" id="experience">
+      <div class="section-head">
+        <span class="num">03</span>
+        <div>
+          <p class="eyebrow">THE SPACE</p>
+          <h3>MOVE<br><em>TOGETHER</em></h3>
+        </div>
+      </div>
+
+      <div class="experience-stage">
+        <div class="stage-grid"></div>
+        <div class="mirror-ball">✦</div>
+        <div class="stage-copy">
+          <span>01</span>
+          <h4>LIGHT</h4>
+          <p>光线跟随节奏移动，空间不再是静态的容器。</p>
+        </div>
+        <div class="stage-copy second">
+          <span>02</span>
+          <h4>BODY</h4>
+          <p>身体成为尺度，舞步成为一种空间语言。</p>
+        </div>
+        <div class="stage-copy third">
+          <span>03</span>
+          <h4>ENERGY</h4>
+          <p>当所有人一起移动，空间开始真正地“活”起来。</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-brand">DISCO<br>NEVER STOPS</div>
+      <div>A DISCO WORLD MAKER</div>
+      <div>MAKE YOUR DISCO · 2026</div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
